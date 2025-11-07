@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Exercise Replica</title>
+<style>
+  :root{
+    --bg:#f0f3f7;
+    --frame-bg:#ffffff;
+    --frame-shadow: 0 10px 25px rgba(0,0,0,0.35), inset 0 2px 0 rgba(255,255,255,0.6);
+  }
+  html,body{
+    height:100%;
+    margin:0;
+    background:var(--bg);
+    font-family: "Georgia", "Times New Roman", serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  .page{
+    min-height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+    box-sizing:border-box;
+  }
+
+  .card{
+    width:640px;
+    background:var(--frame-bg);
+    padding:28px;
+    border-radius:8px;
+    box-shadow: var(--frame-shadow);
+    border:1px solid rgba(0,0,0,0.06);
+  }
+
+  .stack{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+
+  .hello{
+    font-weight:700;
+    font-size:36px;
+    line-height:1;
+    color:#111;
+    padding:18px 22px;
+    border-radius:6px;
+    box-sizing:border-box;
+    display:block;
+    width:100%;
+  }
+
+  .top{
+    background:linear-gradient(#bfe6ee,#bfe6ee);
+    border-radius:10px;
+    padding:10px;
+    box-sizing:border-box;
+    box-shadow: 0 0 0 6px #ffb4a0, 0 0 0 10px #ff6b4b, 0 6px 18px rgba(0,0,0,0.25);
+  }
+
+  .top .hello{
+    background:#bfe6ee;
+    border:6px solid rgba(255,255,255,0.0);
+    padding:12px 16px;
+    font-size:36px;
+    border-radius:6px;
+    color:#0b2230;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  }
+
+  .middle{
+    background: #fffa00;
+    border-radius:14px;
+    padding:8px;
+    box-sizing:border-box;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.04), 0 6px 12px rgba(0,0,0,0.12);
+    border:4px solid #1b8be6;
+  }
+
+  .middle .hello{
+    background: transparent;
+    padding:10px 18px;
+    font-size:34px;
+    color:#111;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+    border-radius:10px;
+  }
+
+  .bottom{
+    border-radius:6px;
+    padding:8px;
+    box-sizing:border-box;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+    background:linear-gradient(180deg, #2e9b6b 0%, #2e9b6b 100%);
+  }
+
+  .bottom .pattern{
+    border-radius:4px;
+    padding:16px 20px;
+    background:
+      radial-gradient(circle at 10px 10px, #9f7b6b 6px, transparent 7px),
+      radial-gradient(circle at 50px 18px, #9f7b6b 6px, transparent 7px),
+      radial-gradient(circle at 90px 10px, #9f7b6b 6px, transparent 7px),
+      radial-gradient(circle at 130px 18px, #9f7b6b 6px, transparent 7px),
+      linear-gradient(#2e9b6b,#2e9b6b);
+    background-size: 160px 36px;
+    background-repeat: repeat-x;
+  }
+
+  .bottom .hello{
+    background:transparent;
+    padding:8px 12px;
+    font-size:36px;
+    color:#082a1f;
+  }
+
+  .note{
+    margin-top:22px;
+    text-align:center;
+    color:#d41d1d;
+    font-style:italic;
+    font-weight:700;
+    font-size:20px;
+  }
+
+  @media (max-width:700px){
+    .card{ width:100%; }
+    .hello{ font-size:28px; }
+    .top .hello, .bottom .hello { font-size:28px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <div class="stack">
+        <div class="top">
+          <div class="hello">Hello World</div>
+        </div>
+        <div class="middle">
+          <div class="hello">Hello World</div>
+        </div>
+        <div class="bottom">
+          <div class="pattern">
+            <div class="hello">Hello World</div>
+          </div>
+        </div>
+      </div>
+      <div class="note">* Note colors, backgrounds and borders.</div>
+    </div>
+  </div>
+</body>
+</html>
